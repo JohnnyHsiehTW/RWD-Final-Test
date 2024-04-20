@@ -68,6 +68,9 @@ body {
     max-width: inherit;
     z-index: 1000;
 }
+.header h1 {
+    display: flex;
+}
 .logo {
     background-image: url("./images/logo/logo_w@svg.svg");
     width: 120px;
@@ -102,6 +105,17 @@ body {
 .side-menu-bar {
     display: none;
 }
+@media (max-width:768px) {
+    .menu {
+        gap: 5px;
+    }
+    .menu a {
+        padding: 0 3px;
+    }
+    .logo {
+        margin: 1rem 0 1rem 1rem;
+    }
+}
 @media (max-width:430px) {
     .logo {
         margin: 1rem 1rem;
@@ -134,7 +148,7 @@ body {
         padding: 10px;
     }
     .menu-show .menu {
-        max-height: 100px;
+        max-height: 260px;
     }
 }
 /* Header End */
