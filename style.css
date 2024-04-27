@@ -872,6 +872,7 @@ body {
 .register-div {
     margin: 0 auto;
     width: 60%;
+    max-width: 620px;
     border-top: 4px solid #F56C23;
     box-shadow: 3px 3px 4px #00000016;
 }
