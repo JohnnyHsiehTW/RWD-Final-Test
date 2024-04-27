@@ -52,20 +52,19 @@ html {
 body {
     font-family: Microsoft JhengHei;
 }
-.wrap {
+/* .wrap {
     max-width: 1024px;
     margin: 0 auto;
-}
+} */
 
 /* Header Strat */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #00000025;
+    background: #00000085;
     position: fixed;
     width: 100%;
-    max-width: inherit;
     z-index: 1000;
 }
 .header h1 {
@@ -121,7 +120,6 @@ body {
         margin: 1rem 1rem;
     }
     .menu {
-        display: flex;
         flex-direction: column;
         max-height: 0px;
         overflow: hidden;
@@ -155,14 +153,15 @@ body {
 
 /* Banner Start */
 .banner {
-    max-width: 1024px;
     position: relative;
+    background-color: #000000;
 }
 .banner-image {
-    max-width: 100%;
+    max-width: 1024px;
     background-image: url(./images/banner/header_desktop@2x.png);
     width: inherit;
     height: 460px;
+    margin: 0 auto;
     background-size: cover;
     background-position: center;
 }
@@ -196,11 +195,15 @@ body {
     }
 }
 @media (max-width:430px) {
+    .banner-image {
+        background-image: url(./images/banner/header_mobile@2x.png);
+    }
     .brake {
         display: block;
     }
     .banner-text {
         width: 90%;
+        padding: 0.5rem;
     }
     .banner-text h2 {
         font-size: 36px;
@@ -210,7 +213,6 @@ body {
 
 /* Footer Start */
 .footer {
-    max-width: inherit;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -250,26 +252,33 @@ body {
 }
 @media (max-width:768px) {
     .footer {
+        flex-direction: column;
+        align-items: center;
         padding: 40px 10px;
+    }
+    .footer-div {
+        width: 90%;
+        padding: 10px;
     }
 }
 @media (max-width:430px) {
     .footer {
-        flex-direction: column;
-        align-items: center;
         padding: 40px 0;
     }
     .footer-div {
         width: 100%;
-        padding: 10px;
     }
 }
 /* Footer End */
 
 /* Content Start */
-.content-feature {
-    color: #3D1101;
+.content-feature-background {
     background-color: #EFE9E7;
+}
+.content-feature {
+    max-width: 1024px;
+    margin: 0 auto;
+    color: #3D1101;
 }
 .content-feature-title {
     display: flex;
@@ -307,22 +316,32 @@ body {
     width: 100%;
     max-width: inherit;
 }
-.content-features-icon h4 {
+.content-features-icon ul{
     font-size: 18px;
-    padding-bottom: 11px;
 }
-.content-features-icon p {
+.content-features-icon ul>li {
+    font-size: 16px;
+    padding: 11px 0;
     text-align: left;
 }
 @media (max-width:768px) {
     .content-features {
         padding: 31px 10px 50px;
+        display: block;
+    }
+    .content-features-icon {
+        width: 90%;
+        padding-bottom: 30px;
+        margin: 0 auto;
+    }
+    .content-features-icon img {
+        width: 200px;
+    }
+    .content-features-icon ul>li {
+        padding: 11px 20px;
     }
 }
 @media (max-width:430px) {
-    .content-features {
-        display: block;
-    }
     .content-feature-title {
         width: 100%;
         margin: 0;
@@ -330,31 +349,23 @@ body {
     .content-feature-title::before, .content-feature-title::after {
         display: none;  
     }
-    .content-features-icon {
-        width: 100%;
-        padding-bottom: 30px;
-    }
-    .content-features-icon img {
-        width: 200px;
-    }
-    .content-features-icon p {
-        width: 100%;
-        padding: 0 20px;
-    }
-}
 
+}
+.content-chef-background {
+    background-color: #3D1101;
+}
 .content-chef {
+    max-width: 1024px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     gap: 25px;
-    background-color: #3D1101;
 }
 .content-chef img { 
     height: 100%;
     padding-left: 42px;
     align-self: center;
-    width: 100%;
-    max-width: inherit;
+    max-width: 100%;
 }
 .content-chef-text {
     color: #EFE9E7;
@@ -381,16 +392,22 @@ body {
 @media (max-width:700px) {
     .content-chef {
         display: block;
+        text-align: center;
     }
     .content-chef img {
         padding: 10px;
     }
     .content-chef-text {
+        text-align: left;
         padding:10px;
     }
 }
-.content-feedback {
+.content-feedback-background {
     background-color: #EFE9E7;
+}
+.content-feedback {
+    max-width: 1024px;
+    margin: 0 auto;
     padding: 50px 42px;
     color: #3D1101;    
 }
@@ -413,11 +430,14 @@ body {
     .content-feedback {
         padding: 50px 10px;
     }
-}
-@media (max-width:430px) {
     .content-feedbacks {
         display: block;
+        width: 90%;
+        margin: 0 auto;
     }
+}
+@media (max-width:430px) {
+    
 }
 
 .comment-img img {
@@ -446,6 +466,8 @@ body {
     padding: 50px 0 38px;
 }
 .reservation-inform {
+    max-width: 1024px;
+    margin: 0 auto;
     display: flex;
     gap: 20px;
     padding: 0 42px 50px 42px;
@@ -504,10 +526,7 @@ body {
 @media (max-width:768px) {
     .reservation-inform {
         padding: 0 10px 50px 10px;
-    }
-}
-@media (max-width:430px) {
-    .reservation-inform {
+    }.reservation-inform {
         display: block;
         max-height: inherit;
     }
@@ -521,18 +540,25 @@ body {
         padding-bottom: 0;
     }
 }
+@media (max-width:430px) {
+    
+}
 /* Content End */
 
 /* Cart */
 /* Product Start */
+.product-background {
+    background-color: #EFE9E7;
+}
 .product {
+    max-width: 1024px;
     display: flex;
     gap: 20px;
     padding: 50px 42px;
+    margin: 0 auto;
     color: #3D1101;
     background-color: #EFE9E7;
 }
-
 .product-menu {
     width: 20%;
 }
@@ -563,11 +589,6 @@ body {
     width: 80%;
 }
 @media (max-width:768px) {
-    .product-list {
-        width: 75%;
-    }
-}
-@media (max-width:430px) {
     .product {
         display: block;
         padding: 52px 10px 50px;
@@ -579,6 +600,9 @@ body {
     .product-list {
         width: 100%;
     }
+}
+@media (max-width:430px) {
+    
 }
 .product-list-topbar {
     display: flex;
@@ -710,6 +734,10 @@ body {
     cursor: pointer;
 }
 @media (max-width:768px) {
+    .product-list-product {
+        justify-content: center;
+        gap: 40px;
+    }
     .product-list-products {
         width: 45%;
     }
@@ -750,6 +778,7 @@ body {
 .login-div {
     margin: 0 auto;
     width: 30%;
+    max-width: 300px;
     border-top: 4px solid #F56C23;
     box-shadow: 3px 3px 4px #00000016;
 }
@@ -901,8 +930,8 @@ body {
     cursor: pointer;
 }
 @media (max-width:768px) {
-    .register-div-box {
-        display: block;
+    .register-div {
+        width: 90%;
     }
     .register-div-form {
         text-align: center;
